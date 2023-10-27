@@ -9,7 +9,7 @@ namespace Spryker\Glue\ProductOfferServicePointAvailabilitiesRestApi\Dependency\
 
 use Generated\Shared\Transfer\ProductOfferServicePointAvailabilityCriteriaTransfer;
 
-interface ProductOfferServicePointAvailabilitiesRestApiToProductOfferServicePointAvailabilityCalculatorClientInterface
+interface ProductOfferServicePointAvailabilitiesRestApiToProductOfferServicePointAvailabilityCalculatorStorageClientInterface
 {
     /**
      * @param \Generated\Shared\Transfer\ProductOfferServicePointAvailabilityCriteriaTransfer $productOfferServicePointAvailabilityCriteriaTransfer
