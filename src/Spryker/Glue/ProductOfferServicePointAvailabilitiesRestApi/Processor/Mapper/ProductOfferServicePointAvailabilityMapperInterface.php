@@ -13,12 +13,6 @@ use Generated\Shared\Transfer\RestProductOfferServicePointAvailabilitiesResponse
 
 interface ProductOfferServicePointAvailabilityMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\RestProductOfferServicePointAvailabilitiesRequestAttributesTransfer $restProductOfferServicePointAvailabilitiesRequestAttributesTransfer
-     * @param \Generated\Shared\Transfer\ProductOfferServicePointAvailabilityCriteriaTransfer $productOfferServicePointAvailabilityCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferServicePointAvailabilityCriteriaTransfer
-     */
     public function mapRestProductOfferServicePointAvailabilitiesRequestAttributesTransferToProductOfferServicePointAvailabilityCriteriaTransfer(
         RestProductOfferServicePointAvailabilitiesRequestAttributesTransfer $restProductOfferServicePointAvailabilitiesRequestAttributesTransfer,
         ProductOfferServicePointAvailabilityCriteriaTransfer $productOfferServicePointAvailabilityCriteriaTransfer

@@ -26,10 +26,6 @@ class ProductOfferServicePointAvailabilityResponseBuilder implements ProductOffe
      */
     protected ProductOfferServicePointAvailabilityMapperInterface $productOfferServicePointAvailabilityMapper;
 
-    /**
-     * @param \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResourceBuilderInterface $restResourceBuilder
-     * @param \Spryker\Glue\ProductOfferServicePointAvailabilitiesRestApi\Processor\Mapper\ProductOfferServicePointAvailabilityMapperInterface $productOfferServicePointAvailabilityMapper
-     */
     public function __construct(
         RestResourceBuilderInterface $restResourceBuilder,
         ProductOfferServicePointAvailabilityMapperInterface $productOfferServicePointAvailabilityMapper

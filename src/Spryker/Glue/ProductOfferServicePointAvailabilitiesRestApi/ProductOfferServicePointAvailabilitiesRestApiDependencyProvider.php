@@ -21,11 +21,6 @@ class ProductOfferServicePointAvailabilitiesRestApiDependencyProvider extends Ab
      */
     public const CLIENT_PRODUCT_OFFER_SERVICE_POINT_AVAILABILITY_CALCULATOR_STORAGE = 'CLIENT_PRODUCT_OFFER_SERVICE_POINT_AVAILABILITY_CALCULATOR_STORAGE';
 
-    /**
-     * @param \Spryker\Glue\Kernel\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Container
-     */
     public function provideDependencies(Container $container): Container
     {
         $container = parent::provideDependencies($container);
@@ -35,11 +30,6 @@ class ProductOfferServicePointAvailabilitiesRestApiDependencyProvider extends Ab
         return $container;
     }
 
-    /**
-     * @param \Spryker\Glue\Kernel\Container $container
-     *
-     * @return \Spryker\Glue\Kernel\Container
-     */
     protected function addProductOfferServicePointAvailabilityCalculatorStorageClient(Container $container): Container
     {
         $container->set(static::CLIENT_PRODUCT_OFFER_SERVICE_POINT_AVAILABILITY_CALCULATOR_STORAGE, function (Container $container) {

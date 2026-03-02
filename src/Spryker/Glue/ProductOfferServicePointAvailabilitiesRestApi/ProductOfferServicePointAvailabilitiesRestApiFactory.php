@@ -21,9 +21,6 @@ use Spryker\Glue\ProductOfferServicePointAvailabilitiesRestApi\Processor\Reader\
  */
 class ProductOfferServicePointAvailabilitiesRestApiFactory extends AbstractFactory
 {
-    /**
-     * @return \Spryker\Glue\ProductOfferServicePointAvailabilitiesRestApi\Processor\Builder\ProductOfferServicePointAvailabilityResponseBuilderInterface
-     */
     public function createProductOfferServicePointAvailabilityResponseBuilder(): ProductOfferServicePointAvailabilityResponseBuilderInterface
     {
         return new ProductOfferServicePointAvailabilityResponseBuilder(
@@ -32,17 +29,11 @@ class ProductOfferServicePointAvailabilitiesRestApiFactory extends AbstractFacto
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ProductOfferServicePointAvailabilitiesRestApi\Processor\Mapper\ProductOfferServicePointAvailabilityMapperInterface
-     */
     public function createProductOfferServicePointAvailabilityMapper(): ProductOfferServicePointAvailabilityMapperInterface
     {
         return new ProductOfferServicePointAvailabilityMapper();
     }
 
-    /**
-     * @return \Spryker\Glue\ProductOfferServicePointAvailabilitiesRestApi\Processor\Reader\ProductOfferServicePointAvailabilityReaderInterface
-     */
     public function createProductOfferServicePointAvailabilityReader(): ProductOfferServicePointAvailabilityReaderInterface
     {
         return new ProductOfferServicePointAvailabilityReader(
@@ -52,9 +43,6 @@ class ProductOfferServicePointAvailabilitiesRestApiFactory extends AbstractFacto
         );
     }
 
-    /**
-     * @return \Spryker\Glue\ProductOfferServicePointAvailabilitiesRestApi\Dependency\Client\ProductOfferServicePointAvailabilitiesRestApiToProductOfferServicePointAvailabilityCalculatorStorageClientInterface
-     */
     public function getProductOfferServicePointAvailabilityCalculatorStorageClient(): ProductOfferServicePointAvailabilitiesRestApiToProductOfferServicePointAvailabilityCalculatorStorageClientInterface
     {
         return $this->getProvidedDependency(ProductOfferServicePointAvailabilitiesRestApiDependencyProvider::CLIENT_PRODUCT_OFFER_SERVICE_POINT_AVAILABILITY_CALCULATOR_STORAGE);

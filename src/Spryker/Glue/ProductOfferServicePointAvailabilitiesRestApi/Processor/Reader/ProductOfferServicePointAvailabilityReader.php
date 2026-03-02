@@ -32,11 +32,6 @@ class ProductOfferServicePointAvailabilityReader implements ProductOfferServiceP
      */
     protected ProductOfferServicePointAvailabilityResponseBuilderInterface $productOfferServicePointAvailabilityResponseBuilder;
 
-    /**
-     * @param \Spryker\Glue\ProductOfferServicePointAvailabilitiesRestApi\Processor\Mapper\ProductOfferServicePointAvailabilityMapperInterface $productOfferServicePointAvailabilityMapper
-     * @param \Spryker\Glue\ProductOfferServicePointAvailabilitiesRestApi\Dependency\Client\ProductOfferServicePointAvailabilitiesRestApiToProductOfferServicePointAvailabilityCalculatorStorageClientInterface $productOfferServicePointAvailabilityCalculatorStorageClient
-     * @param \Spryker\Glue\ProductOfferServicePointAvailabilitiesRestApi\Processor\Builder\ProductOfferServicePointAvailabilityResponseBuilderInterface $productOfferServicePointAvailabilityResponseBuilder
-     */
     public function __construct(
         ProductOfferServicePointAvailabilityMapperInterface $productOfferServicePointAvailabilityMapper,
         ProductOfferServicePointAvailabilitiesRestApiToProductOfferServicePointAvailabilityCalculatorStorageClientInterface $productOfferServicePointAvailabilityCalculatorStorageClient,
@@ -47,12 +42,6 @@ class ProductOfferServicePointAvailabilityReader implements ProductOfferServiceP
         $this->productOfferServicePointAvailabilityResponseBuilder = $productOfferServicePointAvailabilityResponseBuilder;
     }
 
-    /**
-     * @param \Spryker\Glue\GlueApplication\Rest\Request\Data\RestRequestInterface $restRequest
-     * @param \Generated\Shared\Transfer\RestProductOfferServicePointAvailabilitiesRequestAttributesTransfer $restProductOfferServicePointAvailabilitiesRequestAttributesTransfer
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
-     */
     public function getProductOfferServicePointAvailabilities(
         RestRequestInterface $restRequest,
         RestProductOfferServicePointAvailabilitiesRequestAttributesTransfer $restProductOfferServicePointAvailabilitiesRequestAttributesTransfer

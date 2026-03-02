@@ -17,12 +17,6 @@ use Generated\Shared\Transfer\RestProductOfferServicePointAvailabilityResponseIt
 
 class ProductOfferServicePointAvailabilityMapper implements ProductOfferServicePointAvailabilityMapperInterface
 {
-    /**
-     * @param \Generated\Shared\Transfer\RestProductOfferServicePointAvailabilitiesRequestAttributesTransfer $restProductOfferServicePointAvailabilitiesRequestAttributesTransfer
-     * @param \Generated\Shared\Transfer\ProductOfferServicePointAvailabilityCriteriaTransfer $productOfferServicePointAvailabilityCriteriaTransfer
-     *
-     * @return \Generated\Shared\Transfer\ProductOfferServicePointAvailabilityCriteriaTransfer
-     */
     public function mapRestProductOfferServicePointAvailabilitiesRequestAttributesTransferToProductOfferServicePointAvailabilityCriteriaTransfer(
         RestProductOfferServicePointAvailabilitiesRequestAttributesTransfer $restProductOfferServicePointAvailabilitiesRequestAttributesTransfer,
         ProductOfferServicePointAvailabilityCriteriaTransfer $productOfferServicePointAvailabilityCriteriaTransfer
@@ -83,12 +77,6 @@ class ProductOfferServicePointAvailabilityMapper implements ProductOfferServiceP
         return $restProductOfferServicePointAvailabilitiesResponseAttributesTransfer;
     }
 
-    /**
-     * @param \Generated\Shared\Transfer\ProductOfferServicePointAvailabilityResponseItemTransfer $productOfferServicePointAvailabilityResponseItemTransfer
-     * @param \Generated\Shared\Transfer\RestProductOfferServicePointAvailabilityResponseItemsAttributesTransfer $restProductOfferServicePointAvailabilityResponseItemsAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\RestProductOfferServicePointAvailabilityResponseItemsAttributesTransfer
-     */
     protected function mapProductOfferServicePointAvailabilityResponseItemTransferToRestProductOfferServicePointAvailabilityResponseItemsAttributesTransfer(
         ProductOfferServicePointAvailabilityResponseItemTransfer $productOfferServicePointAvailabilityResponseItemTransfer,
         RestProductOfferServicePointAvailabilityResponseItemsAttributesTransfer $restProductOfferServicePointAvailabilityResponseItemsAttributesTransfer
