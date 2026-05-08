@@ -1,0 +1,86 @@
+resource:
+    name: ProductOfferServicePointAvailabilities
+    shortName: product-offer-service-point-availabilities
+    description: 'Calculates product offer availability at service points'
+
+    operations:
+        - type: Post
+          uriTemplate: '/product-offer-service-point-availabilities'
+          status: 200
+          normalizationContext:
+              gen_id: false
+
+    processor: Spryker\Glue\ProductOfferServicePointAvailabilitiesRestApi\Api\Storefront\Processor\ProductOfferServicePointAvailabilitiesStorefrontProcessor
+
+    paginationEnabled: false
+
+    properties:
+        # Request properties (writable)
+        servicePointUuids:
+            type: array
+            writable: true
+            readable: false
+            required: true
+            description: 'A collection of Universally Unique Identifiers (UUIDs) for service points'
+            openapiContext:
+                type: array
+                items:
+                    type: string
+
+        serviceTypeUuid:
+            type: string
+            writable: true
+            readable: false
+            required: true
+            description: 'A UUID for a service type'
+            openapiContext:
+                example: 'd1c20855-3f1d-5b85-a2c5-bba1644a70d0'
+
+        productOfferServicePointAvailabilityRequestItems:
+            type: array
+            writable: true
+            readable: false
+            required: true
+            description: 'A collection of items in a request for product offer service point availability'
+            openapiContext:
+                type: array
+                items:
+                    type: object
+                    properties:
+                        productConcreteSku:
+                            type: string
+                        productOfferReference:
+                            type: string
+                        quantity:
+                            type: integer
+
+        # Response properties (readable)
+        productOfferServicePointAvailabilities:
+            type: array
+            writable: false
+            readable: true
+            description: 'A collection of product offer service point availabilities grouped by service point UUID'
+            openapiContext:
+                type: array
+                items:
+                    type: object
+                    properties:
+                        servicePointUuid:
+                            type: string
+                        productOfferServicePointAvailabilityResponseItems:
+                            type: array
+                            items:
+                                type: object
+                                properties:
+                                    productOfferReference:
+                                        type: string
+                                    productConcreteSku:
+                                        type: string
+                                    availableQuantity:
+                                        type: integer
+                                    isAvailable:
+                                        type: boolean
+                                    isNeverOutOfStock:
+                                        type: boolean
+                                    identifier:
+                                        type: string
