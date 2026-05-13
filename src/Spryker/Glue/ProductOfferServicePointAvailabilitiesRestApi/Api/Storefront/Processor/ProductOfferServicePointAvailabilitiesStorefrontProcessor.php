@@ -9,6 +9,7 @@ declare(strict_types=1);
 
 namespace Spryker\Glue\ProductOfferServicePointAvailabilitiesRestApi\Api\Storefront\Processor;
 
+use ArrayObject;
 use Generated\Api\Storefront\ProductOfferServicePointAvailabilitiesStorefrontResource;
 use Generated\Shared\Transfer\ProductOfferServicePointAvailabilityConditionsTransfer;
 use Generated\Shared\Transfer\ProductOfferServicePointAvailabilityCriteriaTransfer;
@@ -37,20 +38,13 @@ class ProductOfferServicePointAvailabilitiesStorefrontProcessor extends Abstract
         ProductOfferServicePointAvailabilitiesStorefrontResource $resource,
     ): ProductOfferServicePointAvailabilityCriteriaTransfer {
         $conditionsTransfer = (new ProductOfferServicePointAvailabilityConditionsTransfer())
-            ->setServiceTypeUuid($resource->serviceTypeUuid);
-
-        foreach ($resource->servicePointUuids ?? [] as $servicePointUuid) {
-            $conditionsTransfer->addServicePointUuid($servicePointUuid);
-        }
+            ->fromArray($resource->toArray(), true)
+            ->setProductOfferServicePointAvailabilityRequestItems(new ArrayObject());
 
         foreach ($resource->productOfferServicePointAvailabilityRequestItems ?? [] as $requestItem) {
             $conditionsTransfer->addProductOfferServicePointAvailabilityRequestItem(
                 $this->buildRequestItemTransfer($requestItem, $resource->merchantReference ?? null),
             );
-        }
-
-        if (isset($resource->shipmentTypeUuid)) {
-            $conditionsTransfer->setShipmentTypeUuid($resource->shipmentTypeUuid);
         }
 
         return (new ProductOfferServicePointAvailabilityCriteriaTransfer())
