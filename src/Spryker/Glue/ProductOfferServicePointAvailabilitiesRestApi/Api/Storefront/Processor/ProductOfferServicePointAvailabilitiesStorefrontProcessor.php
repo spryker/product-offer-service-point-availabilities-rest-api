@@ -41,7 +41,7 @@ class ProductOfferServicePointAvailabilitiesStorefrontProcessor extends Abstract
             ->fromArray($resource->toArray(), true)
             ->setProductOfferServicePointAvailabilityRequestItems(new ArrayObject());
 
-        foreach ($resource->productOfferServicePointAvailabilityRequestItems ?? [] as $requestItem) {
+        foreach ($resource->productOfferServicePointAvailabilityRequestItems as $requestItem) {
             $conditionsTransfer->addProductOfferServicePointAvailabilityRequestItem(
                 $this->buildRequestItemTransfer($requestItem, $resource->merchantReference ?? null),
             );
