@@ -9,6 +9,12 @@ resource:
           status: 200
           normalizationContext:
               gen_id: false
+          openapiContext:
+              responses:
+                  200:
+                      description: 'Availability of the requested product offers per service point.'
+                  422:
+                      description: 'Unprocessable request.'
 
     processor: Spryker\Glue\ProductOfferServicePointAvailabilitiesRestApi\Api\Storefront\Processor\ProductOfferServicePointAvailabilitiesStorefrontProcessor
 
