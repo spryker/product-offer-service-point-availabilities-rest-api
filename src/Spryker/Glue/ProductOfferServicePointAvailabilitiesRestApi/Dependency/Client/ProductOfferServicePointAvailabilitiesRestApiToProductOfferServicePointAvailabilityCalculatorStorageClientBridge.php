@@ -25,8 +25,6 @@ class ProductOfferServicePointAvailabilitiesRestApiToProductOfferServicePointAva
     }
 
     /**
-     * @param \Generated\Shared\Transfer\ProductOfferServicePointAvailabilityCriteriaTransfer $productOfferServicePointAvailabilityCriteriaTransfer
-     *
      * @return array<string, list<\Generated\Shared\Transfer\ProductOfferServicePointAvailabilityResponseItemTransfer>>
      */
     public function calculateProductOfferServicePointAvailabilities(

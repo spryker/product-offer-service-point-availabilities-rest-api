@@ -17,19 +17,10 @@ use Spryker\Glue\ProductOfferServicePointAvailabilitiesRestApi\Processor\Mapper\
 
 class ProductOfferServicePointAvailabilityReader implements ProductOfferServicePointAvailabilityReaderInterface
 {
-    /**
-     * @var \Spryker\Glue\ProductOfferServicePointAvailabilitiesRestApi\Processor\Mapper\ProductOfferServicePointAvailabilityMapperInterface
-     */
     protected ProductOfferServicePointAvailabilityMapperInterface $productOfferServicePointAvailabilityMapper;
 
-    /**
-     * @var \Spryker\Glue\ProductOfferServicePointAvailabilitiesRestApi\Dependency\Client\ProductOfferServicePointAvailabilitiesRestApiToProductOfferServicePointAvailabilityCalculatorStorageClientInterface
-     */
     protected ProductOfferServicePointAvailabilitiesRestApiToProductOfferServicePointAvailabilityCalculatorStorageClientInterface $productOfferServicePointAvailabilityCalculatorStorageClient;
 
-    /**
-     * @var \Spryker\Glue\ProductOfferServicePointAvailabilitiesRestApi\Processor\Builder\ProductOfferServicePointAvailabilityResponseBuilderInterface
-     */
     protected ProductOfferServicePointAvailabilityResponseBuilderInterface $productOfferServicePointAvailabilityResponseBuilder;
 
     public function __construct(

@@ -20,9 +20,6 @@ interface ProductOfferServicePointAvailabilityMapperInterface
 
     /**
      * @param array<string, list<\Generated\Shared\Transfer\ProductOfferServicePointAvailabilityResponseItemTransfer>> $productOfferServicePointAvailabilities
-     * @param \Generated\Shared\Transfer\RestProductOfferServicePointAvailabilitiesResponseAttributesCollectionTransfer $restProductOfferServicePointAvailabilitiesResponseAttributesCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\RestProductOfferServicePointAvailabilitiesResponseAttributesCollectionTransfer
      */
     public function mapProductOfferServicePointAvailabilitiesToRestProductOfferServicePointAvailabilitiesResponseAttributesCollectionTransfer(
         array $productOfferServicePointAvailabilities,

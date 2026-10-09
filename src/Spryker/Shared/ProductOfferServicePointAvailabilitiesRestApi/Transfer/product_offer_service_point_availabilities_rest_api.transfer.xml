@@ -61,6 +61,7 @@
         <property name="productConcreteSku" type="string" description="The unique Stock Keeping Unit (SKU) for a concrete, sellable product variant."/>
         <property name="productOfferReference" type="string" description="A unique reference identifier for a specific product offer from a merchant."/>
         <property name="quantity" type="int" description="The number of units for an item."/>
+        <property name="merchantReference" type="string" description="A unique reference identifier for a merchant."/>
     </transfer>
 
     <transfer name="ProductOfferServicePointAvailabilityResponseItem" strict="true">

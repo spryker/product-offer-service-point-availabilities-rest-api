@@ -30,9 +30,6 @@ class ProductOfferServicePointAvailabilityMapper implements ProductOfferServiceP
 
     /**
      * @param array<string, list<\Generated\Shared\Transfer\ProductOfferServicePointAvailabilityResponseItemTransfer>> $productOfferServicePointAvailabilities
-     * @param \Generated\Shared\Transfer\RestProductOfferServicePointAvailabilitiesResponseAttributesCollectionTransfer $restProductOfferServicePointAvailabilitiesResponseAttributesCollectionTransfer
-     *
-     * @return \Generated\Shared\Transfer\RestProductOfferServicePointAvailabilitiesResponseAttributesCollectionTransfer
      */
     public function mapProductOfferServicePointAvailabilitiesToRestProductOfferServicePointAvailabilitiesResponseAttributesCollectionTransfer(
         array $productOfferServicePointAvailabilities,
@@ -55,9 +52,6 @@ class ProductOfferServicePointAvailabilityMapper implements ProductOfferServiceP
 
     /**
      * @param list<\Generated\Shared\Transfer\ProductOfferServicePointAvailabilityResponseItemTransfer> $productOfferServicePointAvailabilityResponseItemTransfers
-     * @param \Generated\Shared\Transfer\RestProductOfferServicePointAvailabilitiesResponseAttributesTransfer $restProductOfferServicePointAvailabilitiesResponseAttributesTransfer
-     *
-     * @return \Generated\Shared\Transfer\RestProductOfferServicePointAvailabilitiesResponseAttributesTransfer
      */
     protected function mapProductOfferServicePointAvailabilityResponseItemTransfersToRestProductOfferServicePointAvailabilitiesResponseAttributesTransfer(
         array $productOfferServicePointAvailabilityResponseItemTransfers,

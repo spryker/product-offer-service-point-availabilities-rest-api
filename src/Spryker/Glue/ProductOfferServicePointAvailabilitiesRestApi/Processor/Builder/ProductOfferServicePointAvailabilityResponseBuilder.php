@@ -16,14 +16,8 @@ use Symfony\Component\HttpFoundation\Response;
 
 class ProductOfferServicePointAvailabilityResponseBuilder implements ProductOfferServicePointAvailabilityResponseBuilderInterface
 {
-    /**
-     * @var \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResourceBuilderInterface
-     */
     protected RestResourceBuilderInterface $restResourceBuilder;
 
-    /**
-     * @var \Spryker\Glue\ProductOfferServicePointAvailabilitiesRestApi\Processor\Mapper\ProductOfferServicePointAvailabilityMapperInterface
-     */
     protected ProductOfferServicePointAvailabilityMapperInterface $productOfferServicePointAvailabilityMapper;
 
     public function __construct(
@@ -36,8 +30,6 @@ class ProductOfferServicePointAvailabilityResponseBuilder implements ProductOffe
 
     /**
      * @param array<string, list<\Generated\Shared\Transfer\ProductOfferServicePointAvailabilityResponseItemTransfer>> $productOfferServicePointAvailabilities
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
      */
     public function createProductOfferServicePointAvailabilityCollectionRestResponse(
         array $productOfferServicePointAvailabilities

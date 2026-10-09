@@ -13,8 +13,6 @@ interface ProductOfferServicePointAvailabilityResponseBuilderInterface
 {
     /**
      * @param array<string, list<\Generated\Shared\Transfer\ProductOfferServicePointAvailabilityResponseItemTransfer>> $productOfferServicePointAvailabilities
-     *
-     * @return \Spryker\Glue\GlueApplication\Rest\JsonApi\RestResponseInterface
      */
     public function createProductOfferServicePointAvailabilityCollectionRestResponse(
         array $productOfferServicePointAvailabilities
