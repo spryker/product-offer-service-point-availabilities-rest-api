@@ -70,5 +70,6 @@
         <property name="isAvailable" type="bool" description="A flag indicating if a product or service is available."/>
         <property name="availableQuantity" type="int" description="The quantity of a product that is available for sale."/>
         <property name="productConcreteSku" type="string" description="The unique Stock Keeping Unit (SKU) for a concrete, sellable product variant."/>
+        <property name="identifier" type="string"/>
     </transfer>
 </transfers>
